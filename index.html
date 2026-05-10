@@ -45,16 +45,28 @@
       --border: rgba(255, 255, 255, 0.08);
     }
 
+    html {
+      background: #0f0f0f;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
-      background:
+
+      background-color: #0f0f0f;
+      background-image:
         radial-gradient(circle at top, #1a1a2e 0%, #0f0f0f 60%);
+
       color: var(--text);
-      min-height: 100vh;
+
+      min-height: 100dvh;
+      width: 100%;
+
       display: flex;
       justify-content: center;
       align-items: center;
+
       padding: 20px;
+
       overflow-x: hidden;
       position: relative;
     }
@@ -69,6 +81,7 @@
       top: -150px;
       right: -150px;
       z-index: -1;
+      pointer-events: none;
     }
 
     body::after {
@@ -81,15 +94,18 @@
       bottom: -120px;
       left: -120px;
       z-index: -1;
+      pointer-events: none;
     }
 
     .container {
       width: 100%;
       max-width: 920px;
 
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(20, 20, 20, 0.75);
+
       border: 1px solid rgba(255, 255, 255, 0.08);
 
+      -webkit-backdrop-filter: blur(18px);
       backdrop-filter: blur(18px);
 
       border-radius: 24px;
@@ -298,8 +314,8 @@
     }
 
     .bank-item {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       padding: 10px 14px;
       border-radius: 12px;
     }
@@ -311,6 +327,9 @@
     @media (max-width: 700px) {
       .container {
         padding: 25px;
+
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
       }
 
       h1 {
@@ -471,6 +490,7 @@
 
       </article>
 
+    </section>
 
   </main>
 
